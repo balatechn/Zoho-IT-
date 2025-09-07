@@ -442,7 +442,7 @@ app.get('/api/dashboard/stats', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Zoho-IT Asset Tracker API server running on http://localhost:${port}`);
+  console.log(`National Group India IT Asset Tracker API server running on http://localhost:${port}`);
 });
 
 export default app;

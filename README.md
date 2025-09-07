@@ -1,192 +1,172 @@
-# Zoho-IT Asset Tracker
+# National Group India - IT Asset Tracker
 
-### ### ### 💎 Premium Design
-- **Corporate Branding** - Zoho-IT Enterprise branded interface
-- **Gold Theme** - Luxury gold and off-white gradient design
-- **Responsive Layout** - Optimized for desktop and mobile devices
-- **Modern UI/UX** - Crextio-inspired elegant interface
+A modern, elegant IT asset inventory and request management system built for National Group India, featuring SvelteKit and Node.js with a design inspired by Crextio's sophisticated dashboard interface.
 
-### ✍️ Digital Signaturesium Design
-- **Corporate Branding** - Zoho-IT Enterprise branded interface
-- **Gold Theme** - Luxury gold and off-white gradient design
-- **Responsive Layout** - Optimized for desktop and mobile devices
-- **Modern UI/UX** - Crextio-inspired elegant interfaceemium Design
-- **Corporate Branding** - Zoho-IT branded interface
-- **Gold Theme** - Luxury gold and off-white gradient design
-- **Responsive Layout** - Optimized for desktop and mobile devices
-- **Modern UI/UX** - Crextio-inspired elegant interfacealign="center">
-  <img src="static/national-logo.png" alt="Zoho-IT Logo" width="200">
-  
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![SvelteKit](https://img.shields.io/badge/SvelteKit-FF3E00?style=flat&logo=svelte&logoColor=white)](https://kit.svelte.dev/)
-  [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-</div>
+## Features
 
-## 🏢 Overview
+### 🏠 Dashboard
+- Real-time statistics and metrics
+- Recent assets and requests overview
+- Asset status distribution charts
+- Clean, intuitive interface with Crextio-inspired design
 
-A comprehensive Enterprise Asset Management System designed for Zoho-IT, featuring elegant design with gold and off-white gradient themes. This full-stack application provides complete asset lifecycle management from procurement to retirement with digital signature capabilities and professional workflow automation.
+### 💻 Asset Management
+- Complete asset lifecycle tracking
+- Asset categories, brands, models, and specifications
+- Status management (Available, Assigned, Maintenance, Retired)
+- Warranty tracking and expiration alerts
+- Location and assignment tracking
+- Advanced search and filtering
 
-## ✨ Features
+### 📝 Request Management
+- Employee request submission form
+- Priority-based request handling
+- Department-wise request tracking
+- Request approval workflow
+- Status updates and notifications
 
-### � Core Functionality
-- **Asset Inventory Management** - Complete CRUD operations for IT assets
-- **Digital Asset Assignment** - Professional assignment forms with dual digital signatures
-- **Assignment Tracking** - Real-time monitoring of asset assignments and returns
-- **Request Management** - IT asset request workflow system
-- **Dashboard Analytics** - Visual insights and statistics
-- **Master Data Tables** - Centralized category and configuration management
+### 📊 Reports & Analytics
+- Asset distribution by category and status
+- Request analytics by department
+- Warranty expiration tracking
+- Unassigned assets reports
+- CSV export functionality
 
-### � Premium Design
-- **Corporate Branding** - National Group India branded interface
-- **Gold Theme** - Luxury gold and off-white gradient design
-- **Responsive Layout** - Optimized for desktop and mobile devices
-- **Modern UI/UX** - Crextio-inspired elegant interface
+## Tech Stack
 
-### ✍️ Digital Signatures
-- **Canvas-based Signatures** - HTML5 canvas for professional signatures
-- **Dual Signature System** - Employee and authorized personnel signatures
-- **Legal Compliance** - Terms & conditions with digital acceptance
-- **Audit Trail** - Complete assignment documentation
+- **Frontend**: SvelteKit with TypeScript
+- **Backend**: Node.js with Express
+- **Database**: SQLite (easily replaceable with PostgreSQL/MySQL)
+- **Styling**: Custom CSS with modern design patterns
+- **Icons**: Unicode emojis for simplicity
 
-## 🚀 Technology Stack
+## Design Philosophy
 
-### Frontend
-- **SvelteKit** - Modern reactive framework with TypeScript
-- **Vite** - Fast build tool and development server
-- **CSS3** - Custom styling with gradient animations
-- **HTML5 Canvas** - Digital signature implementation
+The application features an elegant, modern design inspired by the Crextio dashboard, including:
+- Clean card-based layouts
+- Subtle gradients and shadows
+- Consistent color scheme and typography
+- Responsive design for all screen sizes
+- Intuitive navigation and user experience
 
-### Backend
-- **Node.js** - Runtime environment
-- **Express.js** - RESTful API framework
-- **SQLite** - Embedded database for development
-- **CORS** - Cross-origin resource sharing
-
-### Development Tools
-- **TypeScript** - Type-safe development
-- **ESLint** - Code quality and consistency
-- **Prettier** - Code formatting
-- **Concurrently** - Parallel script execution
-
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
-- Node.js 18+ and npm
-- Git
-- Modern web browser
+- Node.js (v18 or higher)
+- npm or yarn
 
 ### Quick Start
+
+1. **Navigate to the project directory**
+   ```bash
+   cd d:\DATA\it-inten
+   ```
+
+2. **Install dependencies** (already installed)
+   ```bash
+   npm install
+   ```
+
+3. **Start the application**
+   ```bash
+   npm start
+   ```
+   This command starts both the backend API server (port 3001) and the frontend development server (port 5173) simultaneously.
+
+4. **Access the application**
+   - Frontend: http://localhost:5173
+   - Backend API: http://localhost:3001
+
+### Individual Services
+
+To run services separately:
+
 ```bash
-# Clone the repository
-git clone https://github.com/balatechn/zoho-it-asset-tracker.git
-cd zoho-it-asset-tracker
-
-# Install dependencies
-npm install
-
-# Start the application (both frontend and backend)
-npm start
-```
-
-### Manual Setup
-```bash
-# Start backend server only
+# Backend only
 npm run server
 
-# Start frontend development server only (in another terminal)
+# Frontend only
 npm run dev
-
-# Build for production
-npm run build
 ```
 
-## 🌐 Application URLs
+## Project Structure
 
-- **Frontend**: http://localhost:5173
-- **Backend API**: http://localhost:3001
-- **Database**: SQLite (database.db)
+```
+├── src/
+│   ├── routes/
+│   │   ├── +layout.svelte          # Main layout with navigation
+│   │   ├── +page.svelte             # Dashboard page
+│   │   ├── assets/
+│   │   │   ├── +page.svelte         # Assets list
+│   │   │   └── new/
+│   │   │       └── +page.svelte     # Add new asset
+│   │   ├── requests/
+│   │   │   ├── +page.svelte         # Requests list
+│   │   │   └── new/
+│   │   │       └── +page.svelte     # New request form
+│   │   └── reports/
+│   │       └── +page.svelte         # Reports & analytics
+│   ├── app.css                      # Global styles (Crextio-inspired)
+│   └── app.html                     # Main HTML template
+├── server.js                       # Backend API server
+├── database.db                     # SQLite database (auto-created)
+└── package.json
+```
 
-## 📱 Application Modules
+## Key Features
 
-### 1. Dashboard (`/`)
-- Asset statistics and overview
-- Recent assignments and requests
-- Visual charts and analytics
-- Quick action buttons
+### Asset Management
+- **Comprehensive Tracking**: Track all asset details from purchase to retirement
+- **Smart Asset Tags**: Auto-generation of asset tags based on category
+- **Status Management**: Available, Assigned, Maintenance, Retired
+- **Warranty Alerts**: Automatic tracking of warranty expiration dates
+- **Advanced Search**: Filter by category, status, brand, model, etc.
 
-### 2. Assets (`/assets`)
-- Complete asset inventory
-- Add, edit, delete assets
-- Advanced filtering and search
-- Bulk operations support
+### Request System
+- **Employee Self-Service**: Easy request submission form
+- **Priority Management**: High, Medium, Low priority levels
+- **Approval Workflow**: Pending → Approved/Rejected → Completed
+- **Department Tracking**: Organize requests by department
 
-### 3. Asset Assignment (`/assets/assign`)
-- **Professional assignment forms**
-- **Dual digital signature capture**
-- Employee information collection
-- Terms & conditions acceptance
-- Automatic status updates
+### Reports & Analytics
+- **Visual Charts**: Asset and request distribution charts
+- **Warranty Monitoring**: Track assets with expiring warranties
+- **Utilization Reports**: Identify unassigned or underutilized assets
+- **Export Functionality**: CSV export for external analysis
 
-### 4. Assignment Tracking (`/assignments`)
-- Monitor all active assignments
-- Track overdue returns
-- Process asset returns
-- Department-wise filtering
-
-### 5. Requests (`/requests`)
-- IT asset request workflows
-- Approval management
-- Status tracking
-- Priority handling
-
-### 6. Reports (`/reports`)
-- Asset utilization reports
-- Assignment analytics
-- Export capabilities
-- Custom date ranges
-
-## 🔧 API Endpoints
+## API Endpoints
 
 ### Assets
-- `GET /api/assets` - Retrieve all assets
+- `GET /api/assets` - List all assets
 - `POST /api/assets` - Create new asset
 - `PUT /api/assets/:id` - Update asset
 - `DELETE /api/assets/:id` - Delete asset
 
-### Assignments
-- `GET /api/assignments` - Retrieve all assignments
-- `POST /api/assignments` - Create new assignment
-- `PUT /api/assignments/:id/return` - Mark asset as returned
-- `GET /api/assignments/:id` - Get assignment details
-
 ### Requests
-- `GET /api/requests` - Retrieve all requests
+- `GET /api/requests` - List all requests
 - `POST /api/requests` - Create new request
-- `PUT /api/requests/:id` - Update request
+- `PUT /api/requests/:id` - Update request status
 
 ### Dashboard
 - `GET /api/dashboard/stats` - Get dashboard statistics
+- `GET /api/categories` - Get asset categories
 
-## 🤝 Contributing
+## Development
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+To create a production version of your app:
 
-## 📄 License
+```sh
+npm run build
+```
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+You can preview the production build with `npm run preview`.
 
-## 🏢 About Zoho-IT
+## Support
 
-Zoho-IT is a leading organization committed to excellence in IT asset management and operational efficiency. This application represents our dedication to modern, secure, and user-friendly business solutions.
+For issues or questions:
+1. Check the console for error messages
+2. Verify that both frontend and backend servers are running
+3. Ensure database permissions are correct
+4. Check browser network tab for API call failures
 
----
-
-<div align="center">
-  <p><strong>Built with ❤️ for Zoho-IT</strong></p>
-  <p>© 2025 Zoho-IT. All rights reserved.</p>
-</div>
+Built with ❤️ using SvelteKit and Node.js, featuring a design inspired by modern dashboard interfaces.

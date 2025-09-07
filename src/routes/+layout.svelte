@@ -33,10 +33,10 @@
 		<div class="container">
 			<div class="flex items-center justify-between">
 				<a href="/" class="nav-brand">
-					<img src="/national-logo.png" alt="Zoho-IT" class="brand-logo" />
+					<img src="/national-logo.png" alt="National Group India" class="brand-logo" />
 					<div class="brand-text">
-						<div class="brand-title">Zoho-IT</div>
-						<div class="brand-subtitle">Enterprise Asset Management</div>
+						<div class="brand-title">National Group India</div>
+						<div class="brand-subtitle">IT Asset Tracker</div>
 					</div>
 				</a>
 				

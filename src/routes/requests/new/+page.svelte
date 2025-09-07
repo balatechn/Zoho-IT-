@@ -100,7 +100,7 @@
 </script>
 
 <svelte:head>
-	<title>New Request - Zoho-IT Asset Tracker</title>
+	<title>New Request - National Group India IT Asset Tracker</title>
 </svelte:head>
 
 <div class="new-request-page">

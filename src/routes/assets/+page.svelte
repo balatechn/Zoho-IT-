@@ -105,7 +105,7 @@
 </script>
 
 <svelte:head>
-	<title>Assets - Zoho-IT Asset Tracker</title>
+	<title>Assets - National Group India IT Asset Tracker</title>
 </svelte:head>
 
 <div class="assets-page">

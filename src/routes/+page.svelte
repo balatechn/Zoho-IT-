@@ -101,14 +101,14 @@
 </script>
 
 <svelte:head>
-	<title>Dashboard - Zoho-IT Asset Tracker</title>
+	<title>Dashboard - National Group India IT Asset Tracker</title>
 </svelte:head>
 
 <div class="dashboard">
 	<div class="flex items-center justify-between mb-6">
 		<div>
-			<h1 class="text-3xl font-bold text-primary mb-2">Welcome to Zoho-IT</h1>
-			<p class="text-secondary">Enterprise Asset Management & Digital Workflow System</p>
+			<h1 class="text-3xl font-bold text-primary mb-2">Welcome to National Group India</h1>
+			<p class="text-secondary">IT Asset Management & Request System</p>
 		</div>
 		<div class="flex gap-4">
 			<a href="/assets/new" class="btn btn-primary">
