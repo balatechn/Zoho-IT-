@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { getApiUrl } from '$lib/api';
 	
 	interface Asset {
 		id: number;
@@ -39,7 +40,7 @@
 	async function fetchAssets() {
 		loading = true;
 		try {
-			const response = await fetch('http://localhost:3001/api/assets');
+			const response = await fetch(getApiUrl('/api/assets'));
 			if (response.ok) {
 				assets = await response.json();
 			}
@@ -54,7 +55,7 @@
 		if (!confirm('Are you sure you want to delete this asset?')) return;
 		
 		try {
-			const response = await fetch(`http://localhost:3001/api/assets/${id}`, {
+			const response = await fetch(getApiUrl(`/api/assets/${id}`), {
 				method: 'DELETE'
 			});
 			

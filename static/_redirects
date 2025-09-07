@@ -1,0 +1,5 @@
+# API redirects to backend server
+/api/* https://your-backend-server.herokuapp.com/api/:splat 200
+
+# SPA fallback for client-side routing
+/* /index.html 200
