@@ -1,7 +1,7 @@
-# National Group India - IT Asset Tracker
+# Zoho-IT Asset Tracker
 
 ## Project Overview
-SvelteKit and Node.js application for National Group India's IT asset inventory and request management with elegant design similar to Crextio dashboard.
+SvelteKit and Node.js application for Zoho-IT's asset inventory and request management with elegant design similar to Crextio dashboard.
 
 ## Features
 - IT Asset Inventory Management

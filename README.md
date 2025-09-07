@@ -1,6 +1,16 @@
 # Zoho-IT Asset Tracker
 
-### 💎 Premium Design
+### ### ### 💎 Premium Design
+- **Corporate Branding** - Zoho-IT Enterprise branded interface
+- **Gold Theme** - Luxury gold and off-white gradient design
+- **Responsive Layout** - Optimized for desktop and mobile devices
+- **Modern UI/UX** - Crextio-inspired elegant interface
+
+### ✍️ Digital Signaturesium Design
+- **Corporate Branding** - Zoho-IT Enterprise branded interface
+- **Gold Theme** - Luxury gold and off-white gradient design
+- **Responsive Layout** - Optimized for desktop and mobile devices
+- **Modern UI/UX** - Crextio-inspired elegant interfaceemium Design
 - **Corporate Branding** - Zoho-IT branded interface
 - **Gold Theme** - Luxury gold and off-white gradient design
 - **Responsive Layout** - Optimized for desktop and mobile devices
@@ -15,7 +25,7 @@
 
 ## 🏢 Overview
 
-A comprehensive IT Asset Management System designed for Zoho-IT, featuring elegant design with gold and off-white gradient themes. This full-stack application provides complete asset lifecycle management from procurement to retirement with digital signature capabilities.
+A comprehensive Enterprise Asset Management System designed for Zoho-IT, featuring elegant design with gold and off-white gradient themes. This full-stack application provides complete asset lifecycle management from procurement to retirement with digital signature capabilities and professional workflow automation.
 
 ## ✨ Features
 

@@ -36,7 +36,7 @@
 					<img src="/national-logo.png" alt="Zoho-IT" class="brand-logo" />
 					<div class="brand-text">
 						<div class="brand-title">Zoho-IT</div>
-						<div class="brand-subtitle">IT Asset Tracker</div>
+						<div class="brand-subtitle">Enterprise Asset Management</div>
 					</div>
 				</a>
 				

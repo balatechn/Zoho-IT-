@@ -110,7 +110,7 @@
 </script>
 
 <svelte:head>
-	<title>Add New Asset - National Group India IT Asset Tracker</title>
+	<title>Add New Asset - Zoho-IT Asset Tracker</title>
 </svelte:head>
 
 <div class="add-asset-page">

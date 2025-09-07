@@ -166,7 +166,7 @@
 </script>
 
 <svelte:head>
-	<title>Reports - IT Asset Tracker</title>
+	<title>Reports - Zoho-IT Asset Tracker</title>
 </svelte:head>
 
 <div class="reports-page">
