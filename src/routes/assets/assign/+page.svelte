@@ -290,7 +290,7 @@
 </script>
 
 <svelte:head>
-	<title>Asset Assignment - National Group India IT Asset Tracker</title>
+	<title>Asset Assignment - Zoho-IT Asset Tracker</title>
 </svelte:head>
 
 <div class="assignment-page">

@@ -1,7 +1,11 @@
-# National Group India - IT Asset Tracker
+# Zoho-IT Asset Tracker
 
-<div align="center">
-  <img src="static/national-logo.png" alt="National Group India Logo" width="200">
+### 💎 Premium Design
+- **Corporate Branding** - Zoho-IT branded interface
+- **Gold Theme** - Luxury gold and off-white gradient design
+- **Responsive Layout** - Optimized for desktop and mobile devices
+- **Modern UI/UX** - Crextio-inspired elegant interfacealign="center">
+  <img src="static/national-logo.png" alt="Zoho-IT Logo" width="200">
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![SvelteKit](https://img.shields.io/badge/SvelteKit-FF3E00?style=flat&logo=svelte&logoColor=white)](https://kit.svelte.dev/)
@@ -11,7 +15,7 @@
 
 ## 🏢 Overview
 
-A comprehensive IT Asset Management System designed for National Group India, featuring elegant design with gold and off-white gradient themes. This full-stack application provides complete asset lifecycle management from procurement to retirement with digital signature capabilities.
+A comprehensive IT Asset Management System designed for Zoho-IT, featuring elegant design with gold and off-white gradient themes. This full-stack application provides complete asset lifecycle management from procurement to retirement with digital signature capabilities.
 
 ## ✨ Features
 
@@ -65,8 +69,8 @@ A comprehensive IT Asset Management System designed for National Group India, fe
 ### Quick Start
 ```bash
 # Clone the repository
-git clone https://github.com/balatechn/national-group-india-asset-tracker.git
-cd national-group-india-asset-tracker
+git clone https://github.com/balatechn/zoho-it-asset-tracker.git
+cd zoho-it-asset-tracker
 
 # Install dependencies
 npm install
@@ -166,13 +170,13 @@ npm run build
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🏢 About National Group India
+## 🏢 About Zoho-IT
 
-National Group India is a leading organization committed to excellence in IT asset management and operational efficiency. This application represents our dedication to modern, secure, and user-friendly business solutions.
+Zoho-IT is a leading organization committed to excellence in IT asset management and operational efficiency. This application represents our dedication to modern, secure, and user-friendly business solutions.
 
 ---
 
 <div align="center">
-  <p><strong>Built with ❤️ for National Group India</strong></p>
-  <p>© 2025 National Group India. All rights reserved.</p>
+  <p><strong>Built with ❤️ for Zoho-IT</strong></p>
+  <p>© 2025 Zoho-IT. All rights reserved.</p>
 </div>

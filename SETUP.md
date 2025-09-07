@@ -1,11 +1,11 @@
-# Project Setup Instructions
+# Zoho-IT Asset Tracker - Setup Instructions
 
 ## 🚀 Quick Setup for GitHub Repository
 
 ### Step 1: Create GitHub Repository
 1. Go to [GitHub](https://github.com) and sign in to the `balatechn` account
 2. Click the "+" icon and select "New repository"
-3. Name the repository: `national-group-india-asset-tracker`
+3. Name the repository: `zoho-it-asset-tracker`
 4. Set it as Public or Private (as preferred)
 5. Do NOT initialize with README, .gitignore, or license (we already have these)
 6. Click "Create repository"
@@ -21,8 +21,8 @@ git push -u origin main
 
 ## 📋 Repository Information
 
-- **Repository Name**: `national-group-india-asset-tracker`
-- **GitHub URL**: `https://github.com/balatechn/national-group-india-asset-tracker`
+- **Repository Name**: `zoho-it-asset-tracker`
+- **GitHub URL**: `https://github.com/balatechn/zoho-it-asset-tracker`
 - **Owner**: `balatechn`
 - **Branch**: `main`
 
@@ -48,7 +48,7 @@ git push -u origin main
 - ✅ Initial commit with all files
 
 ### ✅ Design & Branding
-- ✅ National Group India logo integrated
+- ✅ Zoho-IT logo integrated
 - ✅ Gold and off-white gradient theme
 - ✅ Professional corporate design
 - ✅ Responsive layout
@@ -163,4 +163,4 @@ The application is fully responsive and works perfectly on:
 
 **Ready for GitHub! 🚀**
 
-This project is production-ready and includes all modern development practices, professional design, and comprehensive functionality for IT asset management with digital signatures.
+This project is production-ready and includes all modern development practices, professional design, and comprehensive functionality for IT asset management with digital signatures under the Zoho-IT brand.

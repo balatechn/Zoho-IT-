@@ -134,7 +134,7 @@
 </script>
 
 <svelte:head>
-	<title>Assignments - National Group India IT Asset Tracker</title>
+	<title>Assignments - Zoho-IT Asset Tracker</title>
 </svelte:head>
 
 <div class="assignments-page">
