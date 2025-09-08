@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { getApiUrl } from '$lib/api';
 	
 	interface Request {
 		id: number;
@@ -34,7 +35,7 @@
 	async function fetchRequests() {
 		loading = true;
 		try {
-			const response = await fetch('http://localhost:3001/api/requests');
+			const response = await fetch(getApiUrl('/api/requests'));
 			if (response.ok) {
 				requests = await response.json();
 			}
@@ -47,7 +48,7 @@
 	
 	async function updateRequestStatus(id: number, status: string) {
 		try {
-			const response = await fetch(`http://localhost:3001/api/requests/${id}`, {
+			const response = await fetch(getApiUrl(`/api/requests/${id}`), {
 				method: 'PUT',
 				headers: {
 					'Content-Type': 'application/json'
@@ -132,6 +133,43 @@
 			<span>➕</span>
 			New Request
 		</a>
+	</div>
+
+	<!-- Request Processing Information -->
+	<div class="card mb-6 request-info-panel">
+		<div class="card-body">
+			<div class="flex items-start gap-4">
+				<div class="info-icon">
+					<span>ℹ️</span>
+				</div>
+				<div class="info-content">
+					<h3 class="text-lg font-semibold mb-3 text-primary">Request Processing Information</h3>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+						<div class="info-item">
+							<div class="info-item-icon">👥</div>
+							<div>
+								<h4 class="font-medium mb-1">Review Process</h4>
+								<p class="text-sm text-secondary">All requests are reviewed by IT management</p>
+							</div>
+						</div>
+						<div class="info-item">
+							<div class="info-item-icon">⏱️</div>
+							<div>
+								<h4 class="font-medium mb-1">Processing Time</h4>
+								<p class="text-sm text-secondary">Standard requests processed within 6-10 business days</p>
+							</div>
+						</div>
+						<div class="info-item">
+							<div class="info-item-icon">📧</div>
+							<div>
+								<h4 class="font-medium mb-1">Status Updates</h4>
+								<p class="text-sm text-secondary">You'll receive email updates on request status</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- Filters -->
@@ -321,10 +359,18 @@
 		.md\\:grid-cols-4 {
 			grid-template-columns: repeat(4, minmax(0, 1fr));
 		}
+		
+		.md\\:grid-cols-3 {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
 	}
 	
 	.text-secondary {
 		color: var(--text-secondary);
+	}
+	
+	.text-primary {
+		color: var(--primary-color);
 	}
 	
 	.ml-2 {
@@ -333,5 +379,88 @@
 	
 	.w-full {
 		width: 100%;
+	}
+	
+	/* Request Info Panel Styles */
+	.request-info-panel {
+		background: linear-gradient(135deg, #f8f6f0 0%, #e8e6e0 100%);
+		border: 1px solid #d4af37;
+		border-left: 4px solid #d4af37;
+	}
+	
+	.info-icon {
+		font-size: 24px;
+		padding: 8px;
+		background: rgba(212, 175, 55, 0.1);
+		border-radius: 50%;
+		width: 48px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+	
+	.info-content {
+		flex: 1;
+	}
+	
+	.info-item {
+		display: flex;
+		align-items: flex-start;
+		gap: 12px;
+		padding: 16px;
+		background: rgba(255, 255, 255, 0.6);
+		border-radius: 8px;
+		border: 1px solid rgba(212, 175, 55, 0.2);
+		transition: all 0.3s ease;
+	}
+	
+	.info-item:hover {
+		background: rgba(255, 255, 255, 0.8);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+	}
+	
+	.info-item-icon {
+		font-size: 20px;
+		width: 32px;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(212, 175, 55, 0.1);
+		border-radius: 6px;
+		flex-shrink: 0;
+	}
+	
+	.info-item h4 {
+		color: #333;
+		margin: 0;
+	}
+	
+	.info-item p {
+		margin: 0;
+		line-height: 1.4;
+	}
+	
+	@media (max-width: 768px) {
+		.info-content .grid {
+			grid-template-columns: 1fr;
+			gap: 12px;
+		}
+		
+		.info-item {
+			padding: 12px;
+		}
+		
+		.flex.items-start {
+			flex-direction: column;
+			gap: 16px;
+		}
+		
+		.info-icon {
+			align-self: center;
+		}
 	}
 </style>

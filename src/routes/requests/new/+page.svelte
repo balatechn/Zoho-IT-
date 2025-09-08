@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { getApiUrl } from '$lib/api';
 	
 	interface RequestForm {
 		requester_name: string;
@@ -74,7 +75,7 @@
 		loading = true;
 		
 		try {
-			const response = await fetch('http://localhost:3001/api/requests', {
+			const response = await fetch(getApiUrl('/api/requests'), {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -114,6 +115,39 @@
 			<span>←</span>
 			Back to Requests
 		</a>
+	</div>
+
+	<!-- Processing Info -->
+	<div class="card mb-6 processing-info-card">
+		<div class="card-body">
+			<div class="flex items-center gap-3 mb-4">
+				<div class="info-icon">⏱️</div>
+				<h3 class="text-lg font-semibold text-primary">Request Processing Timeline</h3>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+				<div class="timeline-item">
+					<div class="timeline-step">1</div>
+					<div>
+						<h4 class="font-medium">Review Process</h4>
+						<p class="text-sm text-secondary">All requests are reviewed by IT management</p>
+					</div>
+				</div>
+				<div class="timeline-item">
+					<div class="timeline-step">2</div>
+					<div>
+						<h4 class="font-medium">Processing Time</h4>
+						<p class="text-sm text-secondary">Standard requests processed within 6-10 business days</p>
+					</div>
+				</div>
+				<div class="timeline-item">
+					<div class="timeline-step">3</div>
+					<div>
+						<h4 class="font-medium">Status Updates</h4>
+						<p class="text-sm text-secondary">You'll receive email updates on request status</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- Form -->
@@ -286,9 +320,10 @@
 					<h4 class="font-semibold mb-2">Request processing:</h4>
 					<ul class="list-disc list-inside space-y-1 text-sm text-secondary">
 						<li>All requests are reviewed by IT management</li>
-						<li>High priority requests processed within 1-2 business days</li>
-						<li>Standard requests processed within 3-5 business days</li>
+						<li>Standard requests processed within 6-10 business days</li>
+						<li>High priority requests may be expedited</li>
 						<li>You'll receive email updates on request status</li>
+						<li>Approved requests will be prepared and assigned</li>
 					</ul>
 				</div>
 			</div>
@@ -313,10 +348,18 @@
 		.md\\:grid-cols-2 {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
+		
+		.md\\:grid-cols-3 {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
 	}
 	
 	.text-secondary {
 		color: var(--text-secondary);
+	}
+	
+	.text-primary {
+		color: var(--primary-color);
 	}
 	
 	.form-error {
@@ -346,5 +389,76 @@
 	
 	.space-y-1 > * + * {
 		margin-top: 0.25rem;
+	}
+	
+	/* Processing Info Card Styles */
+	.processing-info-card {
+		background: linear-gradient(135deg, #e8f4fd 0%, #d1e9f8 100%);
+		border: 1px solid #3b82f6;
+		border-left: 4px solid #3b82f6;
+	}
+	
+	.info-icon {
+		font-size: 24px;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(59, 130, 246, 0.1);
+		border-radius: 50%;
+		flex-shrink: 0;
+	}
+	
+	.timeline-item {
+		display: flex;
+		align-items: flex-start;
+		gap: 12px;
+		padding: 16px;
+		background: rgba(255, 255, 255, 0.7);
+		border-radius: 8px;
+		border: 1px solid rgba(59, 130, 246, 0.2);
+		transition: all 0.3s ease;
+	}
+	
+	.timeline-item:hover {
+		background: rgba(255, 255, 255, 0.9);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+	}
+	
+	.timeline-step {
+		width: 32px;
+		height: 32px;
+		background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		font-size: 14px;
+		flex-shrink: 0;
+	}
+	
+	.timeline-item h4 {
+		margin: 0 0 4px 0;
+		color: #333;
+	}
+	
+	.timeline-item p {
+		margin: 0;
+		line-height: 1.4;
+	}
+	
+	@media (max-width: 768px) {
+		.processing-info-card .grid {
+			grid-template-columns: 1fr;
+			gap: 12px;
+		}
+		
+		.timeline-item {
+			padding: 12px;
+		}
 	}
 </style>
